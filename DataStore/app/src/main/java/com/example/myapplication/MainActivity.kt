@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun init() {
+        //读取数据
         btn_save.setOnClickListener {
             GlobalScope.async {
                 DataStoreUtils.writaDataStore(this@MainActivity, getData())
