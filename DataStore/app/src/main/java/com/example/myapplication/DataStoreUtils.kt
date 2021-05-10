@@ -8,12 +8,14 @@ import androidx.datastore.preferences.edit
 import androidx.datastore.preferences.preferencesKey
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
+import kotlin.properties.ReadOnlyProperty
 
 object DataStoreUtils {
 
     private val str_Data = preferencesKey<String>("str")
 
     private val SP_NAME = "sp_name"
+
 
     private var mDataStore: DataStore<Preferences>? = null
     suspend fun writaDataStore(mContext: Context, msg: String) {
@@ -34,5 +36,7 @@ object DataStoreUtils {
         }
         return map
     }
+
+
 
 }
