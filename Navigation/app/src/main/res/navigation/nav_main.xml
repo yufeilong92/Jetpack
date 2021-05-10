@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/toHomeFragment">
+    <fragment
+        android:id="@+id/toHomeFragment"
+        android:name="com.example.myapplication.tofragment.ToHomeFragment"
+        android:label="fragment_to_home"
+        tools:layout="@layout/fragment_to_home" >
+        <action
+            android:id="@+id/action_toHomeFragment_to_toMeFragment"
+            app:destination="@id/toMeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/toShopFragment"
+        android:name="com.example.myapplication.tofragment.ToShopFragment"
+        android:label="fragment_to_shop"
+        tools:layout="@layout/fragment_to_shop" />
+    <fragment
+        android:id="@+id/toMeFragment"
+        android:name="com.example.myapplication.tofragment.ToMeFragment"
+        android:label="fragment_to_me"
+        tools:layout="@layout/fragment_to_me" >
+        <action
+            android:id="@+id/action_toMeFragment_to_toShopFragment"
+            app:destination="@id/toShopFragment" />
+    </fragment>
+</navigation>
